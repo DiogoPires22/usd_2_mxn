@@ -29,7 +29,9 @@
     "momentjs": "^2.0.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^6.6.6"
+    "rxjs": "^6.6.6",
+    "scrape-brrr": "^1.1.0",
+    "scrape-it": "^5.3.1"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.6.0",
@@ -37,6 +39,7 @@
     "@nestjs/testing": "^7.6.15",
     "@types/axios": "^0.14.0",
     "@types/cache-manager": "^3.4.0",
+    "@types/cheerio": "^0.22.0",
     "@types/express": "^4.17.11",
     "@types/jest": "^26.0.23",
     "@types/moment": "^2.13.0",

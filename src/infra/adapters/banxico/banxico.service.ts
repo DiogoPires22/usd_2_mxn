@@ -12,7 +12,7 @@ export default class BanxicoService implements ExchangeRateService {
   constructor(
     private readonly httpService: HttpService,
     private cacheManager: Cache,
-    private token: string = process.env.BANXICO_API_KEY,
+    private readonly token: string = process.env.TOKEN,
   ) {}
   async getExchangeRate(): Promise<Rate> {
     try {
