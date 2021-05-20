@@ -34,7 +34,6 @@ export default class DiarioFederationService implements ExchangeRateService {
     const date = moment(this.cleanValue(data[0]), 'DD/MM/yyyy').toDate();
 
     const value = parseFloat(this.cleanValue(data[2]));
-    console.log('---------------------------', data);
     return new Rate('diarioFederation', value, date);
   }
 

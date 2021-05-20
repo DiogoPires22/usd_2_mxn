@@ -3,6 +3,7 @@ import { CACHE_MANAGER } from '@nestjs/common';
 import { HttpModule, HttpService, Module } from '@nestjs/common';
 import BanxicoService from 'src/infra/adapters/banxico/banxico.service';
 import DiarioFederationService from 'src/infra/adapters/diarioFederacion/diario.service';
+import FixerService from 'src/infra/adapters/fixer/fixer.service';
 
 @Module({
   imports: [
@@ -23,11 +24,16 @@ import DiarioFederationService from 'src/infra/adapters/diarioFederacion/diario.
       inject: [CACHE_MANAGER],
     },
     {
+      provide: FixerService,
+      useFactory: (http, cache) => new FixerService(http, cache),
+      inject: [HttpService, CACHE_MANAGER],
+    },
+    {
       provide: 'Providers',
-      useFactory: (banxico, diario) => [banxico, diario],
-      inject: [BanxicoService, DiarioFederationService],
+      useFactory: (banxico, diario, fixer) => [banxico, diario, fixer],
+      inject: [BanxicoService, DiarioFederationService, FixerService],
     },
   ],
-  exports: [BanxicoService, DiarioFederationService, 'Providers'],
+  exports: [BanxicoService, DiarioFederationService, FixerService, 'Providers'],
 })
 export class InfraModule {}

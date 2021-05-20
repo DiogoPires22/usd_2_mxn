@@ -4,6 +4,7 @@ import { HttpService, Inject, Injectable } from '@nestjs/common';
 import Rate from 'src/core/domain/rate';
 import ExchangeRateService from 'src/core/ports/services/exchange.rate.service';
 import IntegrationError from 'src/core/error/integration.error';
+import * as moment from 'moment';
 
 //
 const BANXICO_CACHE_KEY = 'banxico';
@@ -12,7 +13,7 @@ export default class BanxicoService implements ExchangeRateService {
   constructor(
     private readonly httpService: HttpService,
     private cacheManager: Cache,
-    private readonly token: string = process.env.TOKEN,
+    private readonly token: string = process.env.BANXICO_TOKEN,
   ) {}
   async getExchangeRate(): Promise<Rate> {
     try {
@@ -56,7 +57,6 @@ export default class BanxicoService implements ExchangeRateService {
     }
   }
   private convertDate(dateString: string): Date {
-    const dateParts = dateString.split('/');
-    return new Date(+dateParts[2], parseInt(dateParts[1]) - 1, +dateParts[0]);
+    return moment(dateString, 'DD/MM/yyyy').toDate();
   }
 }
