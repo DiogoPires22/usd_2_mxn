@@ -1,9 +1,6 @@
-import { HttpException, HttpService, HttpStatus } from '@nestjs/common';
 import { Cache } from 'cache-manager';
 import { mock, MockProxy } from 'jest-mock-extended';
 import Rate from 'src/core/domain/rate';
-import { of } from 'rxjs';
-import { AxiosResponse } from 'axios';
 import * as moment from 'moment';
 import IntegrationError from 'src/core/error/integration.error';
 import DiarioFederationService from './diario.service';

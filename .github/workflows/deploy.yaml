@@ -4,6 +4,27 @@ on:
     branches:
       - main
 jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v1
+
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+
+    - name: yarn install, yarn test:cov
+      run: |
+        yarn install
+        yarn test:cov
+
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GIT_TOKEN }}
   build:
     runs-on: ubuntu-latest
     steps:
