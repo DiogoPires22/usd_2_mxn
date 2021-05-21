@@ -3,7 +3,6 @@ import { HttpService, Injectable } from '@nestjs/common';
 import Rate from 'src/core/domain/rate';
 import ExchangeRateService from 'src/core/ports/services/exchange.rate.service';
 import IntegrationError from 'src/core/error/integration.error';
-import moment from 'moment';
 
 const FIXER_CACHE_KEY = 'fixer';
 @Injectable()
