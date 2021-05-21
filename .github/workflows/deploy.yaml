@@ -18,6 +18,7 @@ jobs:
 
     - name: yarn install, yarn test:cov
       run: |
+        export COVERALLS_REPO_TOKEN=${{ secrets.COVERALLS_REPO_TOKEN }}
         yarn install
         yarn test:cov
 
