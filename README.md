@@ -7,7 +7,7 @@
 
 <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
     <p align="center">
-  [![Deploy](https://github.com/DiogoPires22/usd_2_mxn/actions/workflows/deploy.yaml/badge.svg?branch=main)](https://github.com/DiogoPires22/usd_2_mxn/actions/workflows/deploy.yaml)
+  <a href="https://github.com/DiogoPires22/usd_2_mxn/actions/workflows/deploy.yaml/badge.svg?branch=main)]" target="_blank"><img src="https://github.com/DiogoPires22/usd_2_mxn/actions/workflows/deploy.yaml/badge.svg?branch=main)]" /></a>
   <a href="https://coveralls.io/repos/github/DiogoPires22/usd_2_mxn/badge.svg?branch=main" target="_blank"><img src="https://coveralls.io/repos/github/DiogoPires22/usd_2_mxn/badge.svg?branch=main" alt="Coverage" /></a>
 </p>
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
