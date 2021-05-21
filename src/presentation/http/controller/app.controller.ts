@@ -13,8 +13,9 @@ export class AppController {
       this.providers.map((p) => p.getExchangeRate()),
     );
     return result.reduce((sum, item) => {
-      console.log('----', sum);
-      if (item.status === 'rejected') return null;
+      // console.log('----', sum);
+      if (item.status === 'rejected') return sum;
+      console.log('xxxx', item);
       return {
         ...sum,
         [item.value.provider]: {

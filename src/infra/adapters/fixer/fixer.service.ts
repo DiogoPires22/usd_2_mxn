@@ -42,6 +42,8 @@ export default class FixerService implements ExchangeRateService {
 
       return new Rate('fixer', value, new Date(date * 1000));
     }
+    console.log(result.data);
+    throw Error(`Result not ok: ${result.data}`);
   }
   private async getLocal(): Promise<Rate> {
     try {
