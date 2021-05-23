@@ -18,14 +18,13 @@ jobs:
 
     - name: yarn install, yarn test:cov
       run: |
-        export COVERALLS_REPO_TOKEN=${{ secrets.COVERALLS_REPO_TOKEN }}
         yarn install
         yarn test:cov
 
     - name: Coveralls
       uses: coverallsapp/github-action@master
       with:
-        github-token: ${{ secrets.GIT_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
   build:
     runs-on: ubuntu-latest
     steps:
