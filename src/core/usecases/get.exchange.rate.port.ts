@@ -1,14 +1,14 @@
+import { ExchangeRateResponse } from 'src/presentation/http/dto/response/exchange.rate.response';
 import ExchangeRateService from '../ports/services/exchange.rate.service';
 import { GetExchangeRatePort } from '../ports/usecases/get.exchange.rate.port';
 
 export default class GetExchangeRate implements GetExchangeRatePort {
   constructor(private readonly providers: Array<ExchangeRateService>) {}
-  async execute(): Promise<any[]> {
+  async execute(): Promise<ExchangeRateResponse> {
     const result = await Promise.allSettled(
       this.providers.map((p) => p.getExchangeRate()),
     );
-    return result.reduce((sum, item) => {
-      // console.log('----', sum);
+    return result.reduce<ExchangeRateResponse>((sum, item) => {
       if (item.status === 'rejected') return sum;
       console.log('xxxx', item);
       return {
@@ -18,8 +18,6 @@ export default class GetExchangeRate implements GetExchangeRatePort {
           last_updated: item.value.lastUpdated,
         },
       };
-    }, []);
-
-    return result;
+    }, new ExchangeRateResponse());
   }
 }

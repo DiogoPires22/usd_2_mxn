@@ -8,7 +8,7 @@
 <p align="center"> Exchange Rate api developed with <a href="http://nestjs.com/" target="_blank">Nestjs</a></p>
     <p align="center">
   <a href="https://github.com/DiogoPires22/usd_2_mxn/actions/workflows/deploy.yaml/badge.svg?branch=main)]" target="_blank"><img src="https://github.com/DiogoPires22/usd_2_mxn/actions/workflows/deploy.yaml/badge.svg?branch=main)]" /></a>
-  <a href="https://coveralls.io/repos/github/DiogoPires22/usd_2_mxn/badge.svg?branch=main" target="_blank"><img src="https://coveralls.io/repos/github/DiogoPires22/usd_2_mxn/badge.svg?branch=main" alt="Coverage" /></a>
+<a href='https://coveralls.io/github/DiogoPires22/usd_2_mxn?branch=main'><img src='https://coveralls.io/repos/github/DiogoPires22/usd_2_mxn/badge.svg?branch=main' alt='Coverage Status' /></a>
 </p>
 
 ## Documentation

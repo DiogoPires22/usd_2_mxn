@@ -1,6 +1,10 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 
 export class ProviderResponse {
+  constructor(value: number, last_updated: Date) {
+    this.value = value;
+    this.last_updated = last_updated;
+  }
   @ApiProperty()
   value: number;
   @ApiProperty()
@@ -8,6 +12,15 @@ export class ProviderResponse {
 }
 
 export class ExchangeRateResponse {
+  constructor(
+    banxico?: ProviderResponse,
+    fixer?: ProviderResponse,
+    diarioFederation?: ProviderResponse,
+  ) {
+    this.banxico = banxico;
+    this.fixer = fixer;
+    diarioFederation = diarioFederation;
+  }
   @ApiProperty({ type: ProviderResponse, name: 'banxico' })
   @ApiPropertyOptional()
   banxico: ProviderResponse;

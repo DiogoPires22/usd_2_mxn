@@ -1,7 +1,7 @@
-import Rate from 'src/core/domain/rate';
+import { ExchangeRateResponse } from 'src/presentation/http/dto/response/exchange.rate.response';
 
 export interface GetExchangeRatePort {
-  execute(): Promise<Array<Rate>>;
+  execute(): Promise<ExchangeRateResponse>;
 }
 
 export namespace GetExchangeRatePort {

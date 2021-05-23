@@ -34,7 +34,7 @@ export class ExchangeRateController {
     status: HttpStatus.UNAUTHORIZED,
     type: ErrorDTO,
   })
-  async get() {
+  async get(): Promise<ExchangeRateResponse> {
     return await this.getExchangeRate.execute();
   }
 }
