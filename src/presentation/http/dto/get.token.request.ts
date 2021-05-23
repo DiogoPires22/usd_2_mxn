@@ -1,7 +1,7 @@
 import { IsString, IsNotEmpty } from 'class-validator';
-import { ApiProperty } from '@nestjs/swagger';
+import { ApiBody, ApiProperty } from '@nestjs/swagger';
 
-export class GetTokenDTO {
+export class GetTokenRequest {
   @IsString()
   @IsNotEmpty()
   @ApiProperty()

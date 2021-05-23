@@ -1,11 +1,11 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class TokenResponseDTO {
+export class GetTokenResponse {
   @ApiProperty()
   access_token: string;
 
-  static create(accessToken: string): TokenResponseDTO {
-    const t = new TokenResponseDTO();
+  static create(accessToken: string): GetTokenResponse {
+    const t = new GetTokenResponse();
     t.access_token = accessToken;
     return t;
   }
