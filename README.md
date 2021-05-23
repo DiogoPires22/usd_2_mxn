@@ -24,6 +24,7 @@
 * Jest
 * docker
 * cachemanager
+* throttle (rate limit 5 request/min)
 
 ## Installation
 

@@ -13,6 +13,8 @@ import {
 } from '@nestjs/swagger';
 import { ErrorDTO } from '../dto/response/error.dto';
 import { ExchangeRateResponseDTO } from '../dto/response/exchange.rate.response.dto';
+import { Throttle, ThrottlerGuard } from '@nestjs/throttler';
+import { ThrottleStrategy } from '../strategies/throttleStrategy';
 
 @Controller('api/v1')
 @ApiBearerAuth()
@@ -24,6 +26,8 @@ export class ExchangeRateController {
 
   @ApiBearerAuth()
   @UseGuards(AuthGuard('jwt'))
+  @UseGuards(ThrottleStrategy)
+  @Throttle(5, 60)
   @Get('rate')
   @HttpCode(HttpStatus.OK)
   @ApiResponse({ status: HttpStatus.OK, type: ExchangeRateResponseDTO })

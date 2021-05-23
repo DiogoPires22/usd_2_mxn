@@ -7,6 +7,7 @@ import { GetTokenUseCasePort } from 'src/core/ports/usecases/get.token.usecase.p
 import { GetTokenDTO } from '../dto/get.token.dto';
 import { TokenResponseDTO } from '../dto/response/token.response.dto';
 import { ErrorDTO } from '../dto/response/error.dto';
+import { SkipThrottle } from '@nestjs/throttler';
 
 @Controller('')
 export class TokenController {
@@ -16,6 +17,7 @@ export class TokenController {
   ) {}
 
   @Post('/token')
+  @SkipThrottle()
   @HttpCode(HttpStatus.OK)
   @ApiResponse({ status: HttpStatus.OK, type: TokenResponseDTO })
   @ApiResponse({ status: HttpStatus.BAD_REQUEST, type: ErrorDTO })
