@@ -23,6 +23,7 @@ export default class FixerService implements ExchangeRateService {
 
       return remoteRate;
     } catch (e) {
+      console.log(e);
       console.error('Fixer Integration Error');
       throw new IntegrationError('Fixer Integration');
     }
@@ -42,8 +43,8 @@ export default class FixerService implements ExchangeRateService {
 
       return new Rate('fixer', value, new Date(date * 1000));
     }
-    console.log(result.data);
-    throw Error(`Result not ok: ${result.data}`);
+
+    throw Error(`Result not ok: ${JSON.stringify(result.data)}`);
   }
   private async getLocal(): Promise<Rate> {
     try {
