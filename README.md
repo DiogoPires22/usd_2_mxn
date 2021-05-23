@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://usd2mxn.herokuapp.com/api-docs/" target="blank"><img src="/docs/sombrero.png" width="320" alt="Nest Logo" /></a>
+  <a href="https://usd2mxn.herokuapp.com/api-docs/" target="blank"><img src="/docs/mario.png" width="200" height="250" alt="Nest Logo" /></a>
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
@@ -13,12 +13,17 @@
 
 ## Documentation
 
-[Swagger](https://usd2mxn.herokuapp.com/api-docs/).
-[Postman](/docs/postman.json).
+* [Swagger](https://usd2mxn.herokuapp.com/api-docs/).
+* [Postman](/docs/postman.json).
 
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 
+* NestJs
+* Auth0
+* passport
+* Swagger
+* Jest
+* docker
+* cachemanager
 
 ## Installation
 
@@ -31,11 +36,27 @@ $ yarn install
 ```bash
 
 # development mode
-$ FIXER_TOKEN={YOUR_FIXER_KEY} BANXICO_TOKEN={YOUR_BANXICO_KEY} npm run start:dev
+$ ISSUER_URL={YOUR_ISSUER_URL} ISSUER_URL={AUDIENCE_URL} FIXER_TOKEN={YOUR_FIXER_KEY} BANXICO_TOKEN={YOUR_BANXICO_KEY} npm run start:dev
 
 # production mode
 $ npm run start:prod
 ```
+
+## Running Docker
+```bash
+# build immage
+$ docker build -t usd2mxn .
+
+# run container
+$ docker run \
+  --env ISSUER_URL={YOUR_ISSUER_URL} --env PORT=3000 \
+  --env AUDIENCE_URL={YOUR_AUDIENCE_URL} \
+  --env FIXER_TOKEN={YOUR_FIXER_TOKEN} \
+  --env BANXICO_TOKEN={YOUR_BANXICO_TOKEN} \
+  -p 3000:3000 \
+usd2mxn
+```
+
 
 ## Test
 
