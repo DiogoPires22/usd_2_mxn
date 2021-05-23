@@ -1,14 +1,9 @@
-import { Controller, Get, Inject } from '@nestjs/common';
-import ExchangeRateService from 'src/core/ports/services/exchange.rate.service';
+import ExchangeRateService from '../ports/services/exchange.rate.service';
+import { GetExchangeRatePort } from '../ports/usecases/get.exchange.rate.port';
 
-@Controller()
-export class AppController {
-  constructor(
-    @Inject('Providers') private readonly providers: Array<ExchangeRateService>,
-  ) {}
-
-  @Get()
-  async getHello() {
+export default class GetExchangeRate implements GetExchangeRatePort {
+  constructor(private readonly providers: Array<ExchangeRateService>) {}
+  async execute(): Promise<any[]> {
     const result = await Promise.allSettled(
       this.providers.map((p) => p.getExchangeRate()),
     );

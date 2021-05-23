@@ -23,15 +23,22 @@
   "dependencies": {
     "@nestjs/common": "^7.6.15",
     "@nestjs/core": "^7.6.15",
+    "@nestjs/passport": "^7.1.5",
     "@nestjs/platform-express": "^7.6.15",
+    "@nestjs/swagger": "^4.8.0",
     "cache-manager": "^3.4.3",
+    "class-validator": "^0.13.1",
     "install": "^0.13.0",
+    "jwks-rsa": "^2.0.3",
     "moment": "^2.29.1",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.6",
     "scrape-brrr": "^1.1.0",
-    "scrape-it": "^5.3.1"
+    "scrape-it": "^5.3.1",
+    "swagger-ui-express": "^4.1.6"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.6.0",
@@ -44,6 +51,7 @@
     "@types/jest": "^26.0.23",
     "@types/moment": "^2.13.0",
     "@types/node": "^14.14.36",
+    "@types/passport": "^1.0.6",
     "@types/supertest": "^2.0.10",
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",

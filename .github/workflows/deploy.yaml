@@ -40,3 +40,5 @@ jobs:
           NODE_ENV: production
           BANXICO_TOKEN: ${{ secrets.BANXICO_TOKEN }}
           FIXER_TOKEN: ${{ secrets.FIXER_TOKEN }}
+          ISSUER_URL: ${{ secrets.ISSUER_URL }}
+          AUDIENCE_URL: ${{ secrets.AUDIENCE_URL }}
