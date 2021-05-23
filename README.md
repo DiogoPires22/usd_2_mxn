@@ -7,9 +7,11 @@
 
 <p align="center"> Exchange Rate api developed with <a href="http://nestjs.com/" target="_blank">Nestjs</a></p>
     <p align="center">
-  <a href="https://github.com/DiogoPires22/usd_2_mxn/actions/workflows/deploy.yaml/badge.svg?branch=main)]" target="_blank"><img src="https://github.com/DiogoPires22/usd_2_mxn/actions/workflows/deploy.yaml/badge.svg?branch=main)]" /></a>
-<a href='https://coveralls.io/github/DiogoPires22/usd_2_mxn?branch=main'><img src='https://coveralls.io/repos/github/DiogoPires22/usd_2_mxn/badge.svg?branch=main' alt='Coverage Status' /></a>
+  <a href="https://img.shields.io/github/checks-status/DiogoPires22/usd_2_mxn/main" target="_blank"><img alt="GitHub branch checks state" src="https://img.shields.io/github/checks-status/DiogoPires22/usd_2_mxn/main"></a>
+<a href='https://coveralls.io/github/DiogoPires22/usd_2_mxn?branch=main'><img src='https://coveralls.io/repos/github/DiogoPires22/usd_2_mxn/badge.svg?branch=main&kill_cache=1' alt='Coverage Status' /></a>
 </p>
+<p align="center">
+<a href='/eslint-badge.svg'><img src='/eslint-badge.svg' alt='Eslint Badge' /></a></p>
 
 ## Documentation
 

@@ -1,14 +1,11 @@
 import { mock, MockProxy } from 'jest-mock-extended';
 import IntegrationError from 'src/core/error/integration.error';
 import { GetExchangeRatePort } from 'src/core/ports/usecases/get.exchange.rate.port';
-import { GetTokenUseCasePort } from 'src/core/ports/usecases/get.token.usecase.port';
-import { GetTokenRequest } from '../dto/get.token.request';
 import {
   ExchangeRateResponse,
   ProviderResponse,
 } from '../dto/response/exchange.rate.response';
 import { ExchangeRateController } from './exchange.rate.controller';
-import { TokenController } from './token.controller';
 
 describe('ExchangeRateController', () => {
   let subject: ExchangeRateController;

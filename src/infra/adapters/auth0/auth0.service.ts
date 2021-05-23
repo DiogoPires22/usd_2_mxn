@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { HttpException, HttpService, HttpStatus } from '@nestjs/common';
+import { HttpService, HttpStatus } from '@nestjs/common';
 import IntegrationError from 'src/core/error/integration.error';
 import UnauthorizedError from 'src/core/error/unauthorized.error';
 import { AuthenticationServicePort } from 'src/core/ports/services/authentication.service';

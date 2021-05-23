@@ -19,7 +19,7 @@ export class ExchangeRateResponse {
   ) {
     this.banxico = banxico;
     this.fixer = fixer;
-    diarioFederation = diarioFederation;
+    this.diarioFederation = diarioFederation;
   }
   @ApiProperty({ type: ProviderResponse, name: 'banxico' })
   @ApiPropertyOptional()

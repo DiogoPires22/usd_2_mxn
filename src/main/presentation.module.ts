@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
-import { APP_GUARD } from '@nestjs/core';
-import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
+import { ThrottlerModule } from '@nestjs/throttler';
 import { ExchangeRateController } from 'src/presentation/http/controller/exchange.rate.controller';
 import { TokenController } from 'src/presentation/http/controller/token.controller';
 import { SwaggerConfig } from 'src/presentation/http/swagger/swagger.config';
