@@ -44,7 +44,11 @@ export default class BanxicoService implements ExchangeRateService {
     ) {
       const datos = result.data.bmx.series[0].datos[0];
       const dateString = datos.fecha;
-      return new Rate('banxico', datos.dato, this.convertDate(dateString));
+      return new Rate(
+        'banxico',
+        parseFloat(datos.dato),
+        this.convertDate(dateString),
+      );
     }
   }
   private async getLocal(): Promise<Rate> {

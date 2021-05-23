@@ -35,7 +35,7 @@ describe('DiarioFederationService', () => {
       expect(scrape).toBeCalledTimes(1);
 
       expect(result.provider).toBe('diarioFederation');
-      expect(result.value).toBe(10.2);
+      expect(result.value).toBe(30.4);
       expect(cacheManagerMock.set).toBeCalledWith('diarioFederation', result);
       expect(moment(result.lastUpdated).format('DD/MM/yyyy')).toBe(r[0]);
     });
